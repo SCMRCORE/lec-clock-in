@@ -10,6 +10,8 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @Slf4j
 public class LecServerApplication {
 
+    //分支测试
+
     public static void main(String[] args) {
         SpringApplication.run(LecServerApplication.class, args);
     }
