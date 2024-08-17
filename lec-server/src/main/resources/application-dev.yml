@@ -6,11 +6,6 @@ lec:
     database: lec-small-program
     username: root
     password: zaqzse1234
-#  alioss:
-#    endpoint:
-#    accessKeyId:
-#    access-key-secret:
-#    bucketName:
   redis:
     host: localhost
     port: 6379
