@@ -47,11 +47,6 @@ lec:
     # 设置微信前端传递过来的令牌名称
     user-wx-token-name: authentication
 
-  alioss:
-    endpoint: ${lec.alioss.endpoint}
-    accessKeyId: ${lec.alioss.access-key-id}
-    accessKeySecret: ${lec.alioss.access-key-secret}
-    bucketName: ${lec.alioss.bucket-name}
 
   wechat:
     appid: ${lec.wechat.appid}
