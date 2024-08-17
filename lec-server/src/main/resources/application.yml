@@ -1,0 +1,74 @@
+spring:
+  profiles:
+    active: dev
+  datasource:
+    druid:
+      driver-class-name: ${lec.datasource.driver-class-name}
+      url: jdbc:mysql://${lec.datasource.host}:${lec.datasource.port}/${lec.datasource.database}?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true
+      username: ${lec.datasource.username}
+      password: ${lec.datasource.password}
+  wechat:
+    appid: ${lec.wechat.appid}
+    secret: ${lec.wechat.secret}
+  redis:
+    host: ${lec.redis.host}
+    port: ${lec.redis.port}
+    database: ${lec.redis.database}
+    auth: ${lec.redis.password}
+
+mybatis:
+  #mapper配置文件
+  mapper-locations: classpath*:/mapper/**/*.xml
+  type-aliases-package: com.lec.entity
+  configuration:
+    #开启驼峰命名
+    map-underscore-to-camel-case: true
+
+logging:
+  level:
+    com:
+      lec:
+        mapper: debug
+        service: info
+        controller: info
+
+lec:
+  jwt:
+    # 设置jwt签名加密时使用的秘钥
+    user-secret-key: lec
+    # 设置jwt过期时间
+    user-ttl: 72000000
+    # 设置前端传递过来的令牌名称
+    user-token-name: token
+    # 设置微信jwt签名加密时使用的秘钥
+    user-wx-secret-key: lec-wx
+    # 设置微信jwt过期时间
+    user-wx-ttl: 72000000
+    # 设置微信前端传递过来的令牌名称
+    user-wx-token-name: authentication
+
+  alioss:
+    endpoint: ${lec.alioss.endpoint}
+    accessKeyId: ${lec.alioss.access-key-id}
+    accessKeySecret: ${lec.alioss.access-key-secret}
+    bucketName: ${lec.alioss.bucket-name}
+
+  wechat:
+    appid: ${lec.wechat.appid}
+    secret: ${lec.wechat.secret}
+
+knife4j:
+  enable: true
+  openapi:
+    title: 用户管理接口文档
+    description: "用户管理接口文档"
+    email: 3551147139@qq.com
+    concat: 果核
+    url: https://www.itcast.cn
+    version: v1.0.0
+    group:
+      default:
+        group-name: default
+        api-rule: package
+        api-rule-resources:
+          - com.lec.controller

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.lec.mapper.TimeMapper">
+    <insert id="insert">
+        insert into time(id, time, temptime) values(#{id}, #{time}, #{temptime})
+    </insert>
+
+    <update id="update">
+        update time set time=#{during} where id = #{id}
+    </update>
+
+    <update id="keepTime">
+        update time set temptime=#{now} where id =#{id}
+    </update>
+
+    <select id="getTime" resultType="com.lec.entity.Time">
+        select * from time where id = #{id}
+    </select>
+
+</mapper>
