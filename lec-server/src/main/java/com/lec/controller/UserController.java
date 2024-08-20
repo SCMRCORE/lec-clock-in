@@ -12,7 +12,6 @@ import com.lec.utils.JwtUtil;
 import com.lec.vo.UserLoginVo;
 import com.lec.vo.UserWxLoginVo;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.BeanUtils;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;

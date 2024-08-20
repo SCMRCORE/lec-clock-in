@@ -1,6 +1,5 @@
 package com.lec.service.lmp;
 
-import com.alibaba.druid.util.HttpClientUtils;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.lec.constant.MessageConstant;
