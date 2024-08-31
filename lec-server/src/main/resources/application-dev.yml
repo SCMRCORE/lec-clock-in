@@ -11,6 +11,3 @@ lec:
     port: 6379
     password: zaqzse1234
     database: 10
-  wechat:
-    appid: wx3404de74fac36c4d
-    secret: c5658422ff4a79312756a8cfe0410aad
